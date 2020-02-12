@@ -68,3 +68,17 @@ function admin_only_render_field_settings( $field ){
 }
 
 add_action('acf/render_field_settings', 'admin_only_render_field_settings');
+
+//hook into ACF filter:
+add_filter('acf/prepare_field', 'admin_only_prepare_field');
+
+function admin_only_prepare_field( $field ){
+  //if no 'Admin Only' setting is set
+    if( empty($field['admin only']) ) return $field;
+
+  //if not an Admin hide field:
+    if( !current_user_can('administrator') ) return false;
+
+  //return
+    return $field;
+}
