@@ -9,8 +9,9 @@ get_header();
 <div class="wrapper">
   <div class="row">
     <div class="column" id="primary">
-      <main>
-        <!-- Content goes here -->
+      <main class="dash-area">
+        <!-- run the Loop here: -->
+        <?php while( have_posts() ) : the_post(); ?>
       </main>
 
     </div>
