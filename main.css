@@ -19,12 +19,17 @@ nav{display: flex;justify-content: space-around;}
 
 .row{display:flex;flex-direction: row;flex-wrap: wrap;}
 
+.cptrow{display:flex;flex-wrap: wrap;justify-content:space-around;}
+.dashcol{flex: 0 1 33%;text-align: center;}
+
 .column{
   flex-direction: column;
   flex-basis: 100%;
   flex:1;
   padding:10px;
 }
+
+.dash-container{background-color:#e9e9e9;}
 
 .pagetitle{display:none;}
 

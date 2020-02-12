@@ -18,17 +18,20 @@ get_header();
         <?php while( have_posts() ) : the_post(); ?>
 
           <div class="dash-container">
-            <div class="row">
+            <div class="cptrow">
               <div class="dashcol">
-                <h2><?php the_field('content_feedback') ?></h2>
                 <h1>Asset One</h1>
+                <h2><?php the_field('content_feedback') ?></h2>
               </div>
               <div class="dashcol">
                 Asset Two
                 <p><?php the_field('multichoice') ?></p>
               </div>
               <div class="dashcol">
-                Asset Three
+                <h3>Asset Three</h3>
+                <?php $image = get_field('design_image'); ?>
+                <img src="<?php echo $image ?>" alt="judy dench">
+
               </div>
             </div>
 
