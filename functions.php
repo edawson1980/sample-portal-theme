@@ -53,3 +53,18 @@ function client_cpt() {
     ));
 }
 add_action( 'init', 'client_cpt' );
+
+//ACF Functions to display fields based on User Role:
+
+//add global setting:
+function admin_only_render_field_settings( $field ){
+  acf_render_field_setting( $field, array(
+    'label' => __('Admin Only?'),
+    'instructions' => '',
+    'name' => admin_only,
+    'type' => 'true_false',
+    'ui' => 1,
+  ), true);
+}
+
+add_action('acf/render_field_settings', 'admin_only_render_field_settings');
