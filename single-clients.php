@@ -3,8 +3,10 @@
 * Template Name: Single Client Template
 * Description: Layout for individual Client dashboard
 */
+acf_form_head();
 get_header();
 ?>
+
 
 
 <div class="wrapper">
@@ -33,6 +35,9 @@ get_header();
                 <img src="<?php echo $image ?>" alt="judy dench">
 
               </div>
+            </div>
+            <div class="clientform">
+              <?php acf_form(); ?>
             </div>
 
           </div>
