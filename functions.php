@@ -57,28 +57,30 @@ add_action( 'init', 'client_cpt' );
 //ACF Functions to display fields based on User Role:
 
 //add global setting:
-function admin_only_render_field_settings( $field ){
-  acf_render_field_setting( $field, array(
-    'label' => __('Admin Only?'),
-    'instructions' => '',
-    'name' => admin_only,
-    'type' => 'true_false',
-    'ui' => 1,
-  ), true);
-}
+// add_action('acf/render_field_settings', 'admin_only_render_field_settings');
+//
+// function admin_only_render_field_settings( $field ){
+//   acf_render_field_setting( $field, array(
+//     'label' => __('Admin Only?'),
+//     'instructions' => '',
+//     'name' => admin_only,
+//     'type' => 'true_false',
+//     'ui' => 1,
+//   ), true);
+// }
 
-add_action('acf/render_field_settings', 'admin_only_render_field_settings');
+
 
 //hook into ACF filter:
-add_filter('acf/prepare_field', 'admin_only_prepare_field');
-
-function admin_only_prepare_field( $field ){
-  //if no 'Admin Only' setting is set
-    if( empty($field['admin only']) ) return $field;
-
-  //if not an Admin hide field:
-    if( !current_user_can('administrator') ) return false;
-
-  //return
-    return $field;
-}
+// add_filter('acf/prepare_field', 'admin_only_prepare_field');
+//
+// function admin_only_prepare_field( $field ){
+//   //if no 'Admin Only' setting is set
+//     if( empty($field['admin only']) ) return $field;
+//
+//   //if not an Admin hide field:
+//     if( !current_user_can('administrator') ) return false;
+//
+//   //return
+//     return $field;
+// }
