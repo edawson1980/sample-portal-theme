@@ -12,7 +12,7 @@ get_header();
     <div class="column" id="primary">
       <main class="dash-area">
         <div class="dash-title">
-          <h1>Welcome, Client.</h1>
+          <h1>Welcome, <?php the_field('client_name') ?></h1>
         </div>
         <!-- start the Loop here: -->
         <?php while( have_posts() ) : the_post(); ?>
@@ -25,7 +25,7 @@ get_header();
               </div>
               <div class="dashcol">
                 Asset Two
-                <?php the_field('multichoice') ?>
+                <p><?php the_field('multichoice') ?></p>
               </div>
               <div class="dashcol">
                 Asset Three
