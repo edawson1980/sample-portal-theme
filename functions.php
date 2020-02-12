@@ -33,3 +33,23 @@ function make_custom_post() {
 	));
 }
 add_action( 'init', 'make_custom_post' );
+
+function client_cpt() {
+  register_post_type('clients',
+    array(
+      'labels' => array(
+        'name' => __( 'Clients' ),
+        'singular_name' => __('Client'),
+      ),
+      'public' => true,
+      'show_ui' => true,
+      'has_archive' => true,
+      'menu_icon' => 'dashicons-businessman',
+      'supports' => array(
+        'title',
+        'editor',
+        'thumbnail',
+        'custom-fields'
+      )
+    ));
+}
