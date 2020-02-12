@@ -47,7 +47,6 @@ function client_cpt() {
       'menu_icon' => 'dashicons-businessman',
       'supports' => array(
         'title',
-        'editor',
         'thumbnail',
         'custom-fields'
       )
