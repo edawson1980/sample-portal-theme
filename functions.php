@@ -53,3 +53,4 @@ function client_cpt() {
       )
     ));
 }
+add_action( 'init', 'client_cpt' );
