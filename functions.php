@@ -34,7 +34,10 @@ function make_custom_post() {
 }
 add_action( 'init', 'make_custom_post' );
 
-function client_cpt() {
+
+
+
+function create_cpt() {
   register_post_type('clients',
     array(
       'labels' => array(
@@ -51,8 +54,25 @@ function client_cpt() {
         'custom-fields'
       )
     ));
+    register_post_type('site_content',
+      array(
+        'labels' => array(
+          'name' => __( 'Site Content' ),
+          'singular_name' => __('Site Content'),
+        ),
+        'public' => true,
+        'show_ui' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-businessman',
+        'supports' => array(
+          'title',
+          'thumbnail',
+          'custom-fields'
+        )
+      ));
 }
-add_action( 'init', 'client_cpt' );
+add_action( 'init', 'create_cpt' );
+
 
 //ACF Functions to display fields based on User Role:
 
