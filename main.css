@@ -26,6 +26,8 @@ nav{display: flex;justify-content: space-around;}
   padding:10px;
 }
 
+.pagetitle{display:none;}
+
 .post-title{text-align:left;}
 .sidebar{
   border:1px solid black;
