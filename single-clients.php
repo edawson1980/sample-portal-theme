@@ -22,11 +22,11 @@ get_header();
           <div class="dash-container">
             <div class="cptrow">
               <div class="dashcol">
-                <h1>Asset One</h1>
-                <h2><?php the_field('content_feedback') ?></h2>
+                <h1>Site Content</h1>
+                <h2><?php the_field('website_content') ?></h2>
               </div>
               <div class="dashcol">
-                Asset Two
+                <h1>Site Design</h1>
                 <p><?php the_field('multichoice') ?></p>
               </div>
               <div class="dashcol">
